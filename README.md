@@ -70,7 +70,7 @@ Your code will be evaluated on the following basis.
 
 	* Your proxy should be able to handle multiple concurrent connections. We will determine this using the following test: (1) Open a connection to your proxy using *telnet*, and then leave it open without typing in any data. (2) Use a Web browser (pointed at your proxy) to request content from some end server.
 	* Furthermore, your proxy should be thread-safe, protecting all updates of the log file and protecting calls to any thread unsafe functions such as *gethostbyaddr*. We will determine this by inspection during grading.
-* Evaluation Quiz (40 points). You will have to be able to explain how your implementation works and handles concurrent requests if you got that functionality working on your Final.
+* Evaluation Quiz (40 points). You will have to be able to explain how your implementation works and handles concurrent requests if you got that functionality working during an in class evaluation quiz after the assignment is submitted. 
 
 ## Hints
 * The best way to get going on your proxy is to start with the basic echo server (CS:APP 12.4.9) and then gradually add functionality that turns the server into a proxy.
