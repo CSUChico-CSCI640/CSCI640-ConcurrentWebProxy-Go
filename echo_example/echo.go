@@ -7,6 +7,7 @@ import (
 	"os"
 )
 
+// Client is struct to hold socket and data channel
 type Client struct {
 	socket net.Conn
 	data   chan []byte

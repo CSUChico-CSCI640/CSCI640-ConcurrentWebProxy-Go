@@ -10,6 +10,7 @@ import (
 	"strings"
 )
 
+// ClientManager is struct to hold map of clients and management channels
 type ClientManager struct {
 	clients    map[*Client]bool
 	broadcast  chan []byte
@@ -17,6 +18,7 @@ type ClientManager struct {
 	unregister chan *Client
 }
 
+// Client is struct to hold socket and data channel
 type Client struct {
 	socket net.Conn
 	data   chan []byte
