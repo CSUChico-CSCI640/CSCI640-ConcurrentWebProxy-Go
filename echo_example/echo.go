@@ -33,14 +33,16 @@ func startServer(port string) {
 	listener, error := net.Listen("tcp", ":"+port)
 	if error != nil {
 		fmt.Println(error)
+		return
 	}
 	for {
-		connection, _ := listener.Accept()
+		connection, error := listener.Accept()
 		if error != nil {
 			fmt.Println(error)
+		} else {
+			client := &Client{socket: connection, data: make(chan []byte)}
+			go client.receive()
 		}
-		client := &Client{socket: connection, data: make(chan []byte)}
-		go client.receive()
 	}
 }
 
