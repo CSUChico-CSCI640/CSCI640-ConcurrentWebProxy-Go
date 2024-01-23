@@ -81,4 +81,4 @@ Your code will be evaluated on the following basis.
 
 * Remove any extraneous print statements.
 * Make sure that you have included your identifying information in *proxy.go*.
-* Submit your *proxy.go* to Turnin.
+* Submit your *proxy.go* to [INGInious](https://inginious.csuchico.edu/).
